@@ -1,13 +1,13 @@
-import pygame
+from unit_circle import UnitCircle
 import settings
-import utils
+import pygame
 
 pygame.init()
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 clock = pygame.time.Clock()
 width = pygame.display.Info().current_w
 height = pygame.display.Info().current_h
-center = (width // 2, height // 2)
+unit_circle = UnitCircle(screen, width, height)
 
 degrees = 0
 run = True
@@ -24,19 +24,27 @@ while run:
                 pygame.quit()
                 exit()
     
-    utils.draw_background(screen, width, height)
+    screen.fill(settings.DARK_GREY)
+    unit_circle.draw_axis()
+    unit_circle.draw_circle()
     
     degrees += 1
     if degrees > 360:
         degrees = 0
-    utils.draw_point(screen, degrees, height, width)
+    unit_circle.calculate_point(degrees)
+
+    unit_circle.draw_angle(degrees)
+    unit_circle.draw_hypotenuse()
+    unit_circle.draw_sin()
+    unit_circle.draw_cos()
 
 
+
+   
     
     
     
-    
-    
+    unit_circle.draw_point()
     
     clock.tick(settings.FPS)
     pygame.display.update()
