@@ -3,11 +3,15 @@ import settings
 import pygame
 
 pygame.init()
+pygame.font.init()
+
 screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 clock = pygame.time.Clock()
 width = pygame.display.Info().current_w
 height = pygame.display.Info().current_h
-unit_circle = UnitCircle(screen, width, height)
+font = pygame.font.Font('assets/liberation_mono.ttf', settings.FONT_SIZE)
+
+unit_circle = UnitCircle(screen, width, height, font)
 
 degrees = 0
 run = True
@@ -32,18 +36,15 @@ while run:
     if degrees > 360:
         degrees = 0
     unit_circle.calculate_point(degrees)
-
-    unit_circle.draw_angle(degrees)
     unit_circle.draw_hypotenuse()
+    unit_circle.draw_angle(degrees)
+    
     unit_circle.draw_sin()
     unit_circle.draw_cos()
 
 
 
-   
-    
-    
-    
+    unit_circle.show_degrees(degrees)
     unit_circle.draw_point()
     
     clock.tick(settings.FPS)
