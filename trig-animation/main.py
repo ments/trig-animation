@@ -41,8 +41,10 @@ while run:
     
     unit_circle.draw_sin()
     unit_circle.draw_cos()
-
-
+    unit_circle.draw_tan()
+    unit_circle.draw_sec()
+    unit_circle.draw_cosec()
+    unit_circle.draw_cotan()
 
     unit_circle.show_degrees(degrees)
     unit_circle.draw_point()
