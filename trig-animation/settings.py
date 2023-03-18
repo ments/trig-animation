@@ -6,9 +6,11 @@ SCALE = 2
 LINE_WIDTH = 2
 WHITE = (255, 255, 255)
 DARK_GREY = (24, 24, 24)
-RED = (255, 0, 0)
-GREEN = (0, 255, 0)
-YELLOW = (255, 255, 0)
-ORANGE = (255, 165, 0)
-PINK = (218, 112, 214)
-LIGHT_BLUE = (173, 216, 230)
+TRIG_FUNCS = {
+    'sin': (255, 0, 0), # Red
+    'cos': (0, 255, 0), # Green
+    'tan': (255, 255, 0), # Yellow
+    'sec': (255, 165, 0), # Orange
+    'cosec': (218, 112, 214), # Pink
+    'cotan': (173, 216, 230), # Light blue
+}

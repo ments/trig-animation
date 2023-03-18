@@ -1,5 +1,5 @@
 # Funciones trigonométricas
 
-Animación de funciones trigonométricas en el circulo unitario.
+Animación del comportamiento de las funciones trigonométricas en el circulo unitario.
 
-EN DESARROLLO
+![alt text](https://files.catbox.moe/cx6b71.png)
